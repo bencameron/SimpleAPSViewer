@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simple SVF Viewer</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no" />
+    <meta charset="UTF-8">
+
+    <!-- Autodesk Forge Viewer files -->
+    <link rel="stylesheet"
+          href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+          type="text/css">
+
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+
+    <script src="./js/site.js"></script>
+
+</head>
+
+<body>
+    <div id="apsViewer"></div>
+</body>
+<script>
+    launchViewer('@Model.Urn');
+</script>
+
+</html>
